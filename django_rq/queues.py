@@ -35,7 +35,7 @@ def get_queue(name='default'):
     """
     Returns an rq Queue using parameters defined in ``RQ_QUEUES``
     """
-    return Queue(name, connection=get_connection(name))
+    return Queue(name, connection=get_connection(name), default_timeout=3600)
 
 
 def get_queue_by_index(index):
